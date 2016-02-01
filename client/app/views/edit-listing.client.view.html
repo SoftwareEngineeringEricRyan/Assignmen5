@@ -18,7 +18,7 @@
         <fieldset>
           <div class="form-group" show-errors>
             <label for="name">Name</label>
-            <input name="name" type="text" ng-model="name" id="name" class="form-control" placeholder="{{listing.name}}" required>
+            <input name="name" type="text" placeholder='{{listing.name}}' ng-model="name" id="name" class="form-control" required>
             <div ng-messages="listingFrom.name.$error" role="alert">
               <p class="help-block error-text" ng-message="required">Listing name is required</p>
             </div>
