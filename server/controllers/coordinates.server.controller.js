@@ -1,4 +1,4 @@
-var config = require('../config/config'), 
+var config = require('../config/config'),
     request = require('request');
 
 module.exports = function(req, res, next) {
@@ -16,7 +16,9 @@ module.exports = function(req, res, next) {
         }
 
         var data = JSON.parse(body);
-        req.results = data.results[0].geometry.location;
+        //req.results = data.results[0].geometry.location;
+        data.results[0] = data.results[0] || {};
+        console.log(data.results[0].geometry)
         next();
     });
   } else {
